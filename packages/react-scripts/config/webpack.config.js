@@ -440,6 +440,7 @@ module.exports = function(webpackEnv) {
               test: cssRegex,
               exclude: cssModuleRegex,
               use: getStyleLoaders({
+                camelCase: true,
                 importLoaders: 1,
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
@@ -456,6 +457,7 @@ module.exports = function(webpackEnv) {
             {
               test: cssModuleRegex,
               use: getStyleLoaders({
+                camelCase: true,
                 importLoaders: 1,
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
@@ -472,6 +474,7 @@ module.exports = function(webpackEnv) {
               exclude: sassModuleRegex,
               use: getStyleLoaders(
                 {
+                  camelCase: true,
                   importLoaders: 2,
                   sourceMap: isEnvProduction
                     ? shouldUseSourceMap
@@ -491,6 +494,7 @@ module.exports = function(webpackEnv) {
               test: sassModuleRegex,
               use: getStyleLoaders(
                 {
+                  camelCase: true,
                   importLoaders: 2,
                   sourceMap: isEnvProduction
                     ? shouldUseSourceMap
